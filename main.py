@@ -11,7 +11,7 @@ machado = Armas_Foice_Machado_Espada()
 p = Player(velocidade=2, armadura=2)
 
 print(f'\nPlayer: Vida = {p.vida}')  #Verificando a vida do Player
-for i in range(10):
+for i in range(3):
   print(
       inimigo.atacar(p)
   )  #Chamando o método atacar do objeto inimigo,fazendo-o atacar o player.
@@ -23,7 +23,6 @@ print(
 print(f"Inimigo: Vida = {inimigo.vida}")  #Verificando a vida do Inimigo
 print(machado.Ataque_Foice(inimigo))
 print(machado.Ataque_Machado(inimigo))
-print(
-    machado.Ataque_Espada(inimigo)
-)  #Chamando o método Ataque_Machado do objeto machado, fazendo-o atacar o inimigo.
-print()
+print(machado.Ataque_Espada(inimigo))
+#Chamando o método Ataque_Machado do objeto machado, fazendo-o atacar o inimigo.
+

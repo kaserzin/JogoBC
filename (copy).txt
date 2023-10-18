@@ -1,0 +1,36 @@
+from inimigo import NPC
+
+class Arma_Machado(NPC):
+  def __init__(self):
+    super().__init__()
+    self.dano_arma_machado = 16
+    self.peso = 0.2
+
+  def Ataque_Machado(self, inimigo):  # Adiciona o parâmetro "inimigo" para afetar o NPC alvo.
+    if inimigo.vivo:
+      inimigo.vida -= self.dano_arma_machado
+      print('''_/﹋\_
+(҂`_´) –
+<;︻╦╤─ ҉ – – – – – – – – – – – – –''')
+      if inimigo.morreu():
+        return inimigo.morreu()
+      else:
+        return f"Inimigo após o ataque: Vida =  {inimigo.vida}"
+    else:
+      return "O inimigo está morto!"
+
+
+# Consider this snippet from ./inimigo.py:
+# from random import randint
+#
+#
+# class NPC():
+#   def __init__(self):
+#     self.NPC_vida = randint(20, 101)
+#     self.NPC_vivo = True
+#
+#   def morreu(self):
+#     if self.NPC_vida <= 0:
+#       self.NPC_vivo = False
+#       return True
+#
